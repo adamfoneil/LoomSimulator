@@ -8,7 +8,7 @@ public class DbFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
 {
     private static IConfiguration Config => new ConfigurationBuilder()
         .AddJsonFile("appsettings.json", optional: false)
-        .AddUserSecrets("31967f0f-7f6d-4f54-9764-6d2562f41493")
+        .AddUserSecrets("416eadcd-e82c-48c5-994b-40195f268957")
         .Build();
 
     public ApplicationDbContext CreateDbContext(string[] args)

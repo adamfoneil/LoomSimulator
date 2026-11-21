@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>31967f0f-7f6d-4f54-9764-6d2562f41493</UserSecretsId>
-    <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+    <ImplicitUsings>enable</ImplicitUsings>    
+    <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>    
+    <UserSecretsId>416eadcd-e82c-48c5-994b-40195f268957</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
