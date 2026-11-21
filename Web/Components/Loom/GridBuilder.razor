@@ -1,0 +1,50 @@
+﻿<style>
+    .main-grid {
+        display: grid;
+        grid-template-columns: repeat(@_width, 1fr);
+        grid-template-rows: repeat(@_height, 1fr);
+        border: 2px solid #888;
+        user-select: none;
+    }
+
+    .selected-cell {
+        background-color:lightgreen
+    }
+
+</style>
+
+<div class="main-grid">
+    @for (int r = 1; r <= _height; r++)
+    {        
+        @for (int c = 1; c <= _width; c++)
+        {
+            string activeClass = _activeCells.Contains((r, c)) ? "selected-cell" : string.Empty;
+            int row = r;
+            int col = c;
+            <div class="grid-cell mx-3 @activeClass" style="border:1px solid gray;width:100%" @onclick="() => ToggleCell(row, col)">(@r, @c)</div>
+        }        
+    }    
+</div>
+
+<ul>
+    @foreach (var cell in _activeCells)
+    {
+        <li>@cell</li>
+    }    
+</ul>
+
+
+@code {
+    private int _width = 32;
+    private int _height = 4;
+    private HashSet<(int Row, int Col)> _activeCells = new();
+
+
+    private void ToggleCell(int row, int col)
+    {
+        if (!_activeCells.Add((row, col)))
+        {
+            _activeCells.Remove((row, col));
+        }
+    }
+}

@@ -1,0 +1,10 @@
+﻿.scom-board {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: min(640px, 90vw);
+    height: min(640px, 90vw);
+    border: 2px solid #888;
+    box-sizing: border-box;
+    user-select: none;
+}

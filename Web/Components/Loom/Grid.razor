@@ -1,4 +1,5 @@
-﻿<RadzenNumeric @bind-Value="Count" Placeholder="count" />
+﻿@using Abstractions
+<RadzenTextBox @bind-Value="_notation" Placeholder="grid notation" Change="ParseGrid" />
 
 <div>
 
@@ -6,10 +7,12 @@
 
 
 @code {
+    private string _notation = string.Empty;
+    private GridDefinition? _grid;
 
-    [Parameter] public int Width { get; set; }
-    [Parameter] public int Height { get; set; }
-    [Parameter] public int Count { get; set; }
-    
-    [Parameter] public Orientation Orientation { get; set; } = Orientation.Horizontal;
+    private async Task ParseGrid()
+    {
+        _grid = GridNotation.Parse(_notation, expanded: false);
+    }
+
 }
