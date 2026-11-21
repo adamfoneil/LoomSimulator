@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Abstractions;
+﻿namespace Abstractions;
 
 /// <summary>
 /// color of each yarn, number of threads overall
