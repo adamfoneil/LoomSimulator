@@ -1,0 +1,27 @@
+.loom-grid {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+        "threading tieup"
+        "drawdown  treadling";
+    gap: 6px;
+    width: 100%;
+    height: 100%;
+}
+
+#threading,
+#tieup,
+#drawdown,
+#treadling {
+    border: 1px solid #000;
+    background-color: #fff;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#threading { grid-area: threading; }
+#tieup     { grid-area: tieup; }
+#drawdown  { grid-area: drawdown; }
+#treadling { grid-area: treadling; }
