@@ -1,8 +1,9 @@
 .loom-grid {
     display: grid;
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: auto 1fr 4fr;
     grid-template-areas:
+        "setup     setup"
         "threading tieup"
         "drawdown  treadling";
     gap: 6px;
@@ -21,6 +22,7 @@
     overflow: hidden;
 }
 
+#loom-setup { grid-area: setup; }
 #threading { grid-area: threading; }
 #tieup     { grid-area: tieup; }
 #drawdown  { grid-area: drawdown; }

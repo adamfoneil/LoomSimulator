@@ -1,24 +1,30 @@
 ﻿@page "/Loom"
 @layout LoomLayout
 
-<div class="loom-grid">
-    <div id="threading">
-        Threading
-    </div>
+<CascadingValue TValue="Abstractions.Loom" Value="ActiveLoom">
+    <div class="loom-grid">
+        <div id="loom-setup">
+            <Configuration />
+        </div>
 
-    <div id="tieup">
-        Tieup
-    </div>
+        <div id="threading">
+            Threading
+        </div>
 
-    <div id="drawdown">
-        Drawdown
-    </div>
+        <div id="tieup">
+            Tieup
+        </div>
 
-    <div id="treadling">
-        Treadling
+        <div id="drawdown">
+            Drawdown
+        </div>
+
+        <div id="treadling">
+            Treadling
+        </div>
     </div>
-</div>
+</CascadingValue>
 
 @code {
-
+    [Parameter] public Abstractions.Loom ActiveLoom { get; set; } = new();
 }

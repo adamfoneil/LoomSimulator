@@ -1,0 +1,15 @@
+﻿<div class="d-flex">
+    <RadzenFormField Text="Pedal Count">
+        <RadzenNumeric @bind-Value="Loom.PedalCount" />
+    </RadzenFormField>
+
+    <RadzenFormField Text="Harness Count">
+        <RadzenNumeric @bind-Value="Loom.HarnessCount" />
+    </RadzenFormField>
+</div>
+
+
+
+@code {
+    [CascadingParameter] public Abstractions.Loom Loom { get; set; } = new();
+}
